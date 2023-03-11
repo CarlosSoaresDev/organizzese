@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: organizzese-front
+    image: organizzese-front-i
+    build:
+      context: app/.
+    ports:
+      - 80:80
+  backend:
+    container_name: organizzese-backend
+    image: organizzese-back-i
+    build:
+      context: server/.
+    ports:
+      - 3001:3001
+  
